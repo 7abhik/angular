@@ -1,18 +1,4 @@
 import { Component } from '@angular/core';
-<<<<<<< HEAD
-
-@Component({
-    selector:'courses',
-    template:'<h1> {{ getTitle() }} </h1>'
-})
-
-export class CoursesComponent {
-    title = "List Of courses";
-    getTitle(){
-        return this.title;
-    }
-}
-=======
 import { CoursesService } from './courses.service';
 
 @Component({
@@ -27,7 +13,11 @@ import { CoursesService } from './courses.service';
     <button  (click)="onSave($event)" >Save</button>
     </div>
     <input type="text" (keyup.enter)="onKeyUp()"/>
-    <input [(ngModel)]="emailid" (keyup.enter)="onKeyUpGetEmail()"/>`
+    <input [(ngModel)]="emailid" (keyup.enter)="onKeyUpGetEmail()"/>
+    <p>{{ text | summery }}</p>
+    
+    `
+
 
 })
 
@@ -35,6 +25,7 @@ import { CoursesService } from './courses.service';
 export class CoursesComponent {
     title = 'List of courses';
     isActive = true;
+    text = 'Text messages are used for personal, family, business and social purposes. Governmental and non-governmental organizations use text messaging for communication between colleagues. In the 2010s, the sending of short informal messages has become an accepted part of many cultures, as happened earlier with emailing.[1] This makes texting a quick and easy way to communicate with friends, family and colleagues, including in contexts where a call would be impolite or inappropriate (e.g., calling very late at night or when one knows the other person is busy with family or work activities). Like e-mail and voicemail and unlike calls (in which the caller hopes to speak directly with the recipient), texting does not require the caller and recipient to both be free at the same moment; this permits communication even between busy individuals. Text';
     courses: string[];
     emailid = 'example@gmail.com';
     onSave($event) {
@@ -55,4 +46,3 @@ export class CoursesComponent {
         this.courses = service.getCourses();
     }
 }
->>>>>>> 600bafe2c934c6ea9519940b51ed8b2b7c31990b
