@@ -1,7 +1,16 @@
 <!--The content below is only a placeholder and can be replaced.-->
-  <h1>
+<!-- <h1>
     Welcome to {{ title }}!
   </h1>
-<courses></courses>
-
+<courses></courses> -->
+<favorite [isFavorite]="post.isFavorite" (change)="onFavoriteChange($event)"></favorite>
+<!-- <favorite [isFavorite]="post.isFavorite"></favorite> -->
+<!-- <bootstrap-panel>
+  <ng-container class="heading">Heading</ng-container>
+  <div class="body"><h1>
+    Body 
+    <p>Some content....</p>
+  </h1></div>
+</bootstrap-panel> -->
+<app-like [likeCount]="tweet.likeCount" [isActive]="tweet.isLiked" ></app-like>
 <router-outlet></router-outlet>

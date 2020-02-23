@@ -1,3 +1,4 @@
+import { FavoriteChanageArgs } from './favorite/favorite.component';
 import { Component } from '@angular/core';
 
 @Component({
@@ -7,4 +8,18 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Angular';
+
+  post = {
+    title: 'Title',
+    isFavorite: true
+  };
+
+  tweet = {
+    body: 'Some tweet is here....',
+    isLiked: true,
+    likeCount: 1
+  };
+  onFavoriteChange(eventArgs: FavoriteChanageArgs) {
+    console.log('Favorite has changed!! ', eventArgs);
+  }
 }
