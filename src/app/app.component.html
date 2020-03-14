@@ -3,7 +3,7 @@
     Welcome to {{ title }}!
   </h1>
 <courses></courses> -->
-<favorite [isFavorite]="post.isFavorite" (change)="onFavoriteChange($event)"></favorite>
+<!-- <favorite [isFavorite]="post.isFavorite" (change)="onFavoriteChange($event)"></favorite> -->
 <!-- <favorite [isFavorite]="post.isFavorite"></favorite> -->
 <!-- <bootstrap-panel>
   <ng-container class="heading">Heading</ng-container>
@@ -12,5 +12,18 @@
     <p>Some content....</p>
   </h1></div>
 </bootstrap-panel> -->
-<app-like [likeCount]="tweet.likeCount" [isActive]="tweet.isLiked" ></app-like>
+<!-- <app-like [likeCount]="tweet.likeCount" [isActive]="tweet.isLiked" ></app-like>
+
+<app-course></app-course>
+
+<h1>{{ tweet.asignee?.name }}</h1>
+
+<input type="text" [appInputFormat]="'uppercase'"> -->
+
+<!-- <contact-form></contact-form> -->
+
+<!-- <signup-form></signup-form> -->
+
+<new-course-form></new-course-form>
+
 <router-outlet></router-outlet>

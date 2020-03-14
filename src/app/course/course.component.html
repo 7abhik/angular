@@ -1,3 +1,26 @@
-<p>
-  course works!
-</p>
+<div *ngIf="Courses.length > 0; then courses  else noCourses"></div>
+<ng-template #courses>
+  List of courses
+</ng-template>
+<ng-template #noCourses>
+  No courses at this time
+</ng-template>
+
+
+<ul class="nav nav-pills">
+  <li [class.active]="viewMode == 'map'"><a (click)="viewMode = 'map'">Map View</a></li>
+  <li [class.active]="viewMode == 'list'"><a (click)="viewMode = 'list'">List View</a></li>
+</ul>
+
+<div [ngSwitch]="viewMode">
+  <div *ngSwitchCase="'map'">This Is Map View</div>
+  <div *ngSwitchCase="'list'">This is Lis view</div>
+  <div *ngSwitchDefault>Select Any</div>
+
+</div>
+<button (click)="onAdd()">Add</button>
+<ul>
+  <li *ngFor="let course of coursesfor; index as i; even as isEven">
+    {{i}}-{{course.name}}<span *ngIf="isEven">(Even)</span>
+  </li>
+</ul>
